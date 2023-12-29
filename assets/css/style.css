@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    background: rgb(0,22,251);
+    background: radial-gradient(circle, rgba(0,22,251,1) 0%, rgba(171,166,241,1) 100%);
+    /* background-image: url("../../assets/image/BG.jpg"); */
+    /* background-image: url("https://e1.pxfuel.com/desktop-wallpaper/267/356/desktop-wallpaper-854x480-960x540-1024x576-1280x720-1366x768-1600x900-1920x1080-2048x1152-for-your-mobile-tablet.jpg"); */
+    box-sizing: border-box; 
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.format {
+    height: 80%;
+    width: 80%;
+    border: 5px groove rgb(110, 70, 255)(55, 0, 255);
+    box-shadow: 0px 0px 15px 20px white; 
+    border-top-right-radius: 20mm;
+    border-bottom-left-radius: 20mm; 
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    align-items: center; 
+}
+.que {
+    margin-top: 4.5%;
+    height: 20%;
+    width: 80%;
+    border: 2px solid rgb(255, 255, 255); 
+    border-top-right-radius: 10mm;
+    border-bottom-left-radius: 10mm;  
+    box-shadow: 0px 0px 5px 5px white; 
+    background-color: rgb(255, 255, 255, 0.5);
+    font-family: 'Alata', sans-serif;
+    font-size: 3vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+
+.ans {
+    height: 45%;
+    width: 70%;
+    /* border: 2px solid rgb(255, 255, 255); 
+    border-top-right-radius: 10mm;
+    border-bottom-left-radius: 10mm;  
+    box-shadow: 0px 0px 3px 2px white; */
+}
+
+.ans > button {
+    width: 45%;
+    height: 30%;
+    margin:16px;
+    border: 2px solid rgb(255, 255, 255); 
+    background-color: transparent;
+    border-top-right-radius: 10mm;
+    border-bottom-left-radius: 10mm;  
+    box-shadow: 0px 0px 3px 2px white; 
+    font-family: 'Alata', sans-serif;
+    font-size: 2vw;
+    text-align: center;
+
+}
+.scor{
+        width: 45%;
+        height: 30%;
+        margin: auto;
+        display: inline-block;
+        font-family: 'Alata', sans-serif;
+        font-size: 2vw;
+        text-align: center;
+        border: 0px solid rgb(255, 255, 255); 
+        background-color: transparent;
+        border-top-right-radius: 10mm;
+        border-bottom-left-radius: 10mm;  
+        box-shadow: 0px 0px 5px 5px white; 
+        background-color: rgb(255, 255, 255, 0.5);
+        position: relative;
+        right: -28%;
+        bottom: -10%;
+
+}
+
+button:hover {
+    background-color: white;
+    color: blue;
+}
