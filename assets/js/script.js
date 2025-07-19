@@ -1,11 +1,12 @@
-let quesAns = [
-    [" Q.1 What is your Name ? ", "Amit", "Aman", "Sonu", "Rahul", "2"],
-    [" Q.2 What is your Hobby ? ", "Planting", "Playing", "Reading", "Writing", "1"],
-    [" Q.3 What are doing currently ? ", "Student", "Doing Job", "Internship", "Not Employed", "1"],
-    [" Q.4 Where are you From ? ", "Bihar", "Uttar Pradesh", "Jharkhand", "Delhi", "2"],
-    [" Q.5 Where is the Capital of India? ", "Lucknow", "Ranchi", "Patna", "New Delhi", "4"],
-    [" Q.6 Where is the Capital of Jharkhand? ", "Lucknow", "Ranchi", "Patna", "New Delhi", "2"]
+const quesAns = [
+    [" Q.1 Who is the current Prime Minister of India? ", "Narendra Modi", "Rahul Gandhi", "Amit Shah", "Yogi Adityanath", "1"],
+    [" Q.2 What is the national animal of India? ", "Lion", "Elephant", "Tiger", "Leopard", "3"],
+    [" Q.3 Which city is known as the financial capital of India? ", "Delhi", "Mumbai", "Bangalore", "Chennai", "2"],
+    [" Q.4 What is the national flower of India? ", "Rose", "Sunflower", "Lotus", "Lily", "3"],
+    [" Q.5 In which year did India gain independence? ", "1945", "1946", "1947", "1950", "3"],
+    [" Q.6 Which Indian festival is known as the Festival of Lights? ", "Holi", "Raksha Bandhan", "Diwali", "Dussehra", "3"]
 ];
+
 
 let x = 0 ;
 let score = 0;
@@ -23,7 +24,7 @@ function printQA() {
 printQA();
 
 function submitAns(ans) {
-    // 
+    
     if ( ans == quesAns[x]['5'] ) {
         score += 10;
     } else {
@@ -31,14 +32,29 @@ function submitAns(ans) {
     }
     
     document.getElementById("scoor").innerHTML = 'SCORE : '+score ;
-    
+
+    if (x == quesAns.length - 1 ) {
+        document.getElementById("end").innerHTML = `
+            <div style="
+                background: linear-gradient(135deg, #4facfe, #00f2fe);
+                color: white;
+                padding: 30px;
+                border-radius: 15px;
+                text-align: center;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            ">
+                <h2 style="margin-bottom: 10px; font-size: 2em;">🎉 QUIZ COMPLETED 🎉</h2>
+                <p style="font-size: 1.5em;">Your Score is: <strong>${score}</strong></p>
+            </div>
+            `;
+
+        return null ;
+    }
+
     x++;
     printQA();
 
-    
 
-    if (x == 5 ) {
-        document.getElementById("scoor").innerHTML = "QUIZ END !!! <br>YOUR SCORE IS : " +score ;
-    }
 }
 
